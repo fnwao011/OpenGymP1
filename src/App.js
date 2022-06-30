@@ -9,7 +9,7 @@ import ContactUs from './ContactUs.js';
 import Registration from './Registration';
 import Highlights from './Highlights'
 import Organization from './Organization';
-import { BrowserRouter, Route, useNavigate, Routes } from 'react-router-dom';
+import { HashRouter, Route, useNavigate, Routes } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import HomePage from './Homepage';
 
@@ -17,7 +17,7 @@ import HomePage from './Homepage';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="App">
 
         <Navbar />
@@ -31,7 +31,7 @@ function App() {
         <Route path="/OpenGymP1/register" element={<Registration />} />
         <Route path="/OpenGymP1/organize" element={<Organization />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
 
   );
 }
