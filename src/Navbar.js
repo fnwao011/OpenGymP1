@@ -12,7 +12,7 @@ const Navbar = () => {
     return (
         <div>
             <Nav>
-                <Logo> <Link to='/' style={{ textDecoration: 'none', color: '#EA5C2B' }}>OpenGym </Link></Logo>
+                <Logo> <Link to='/OpenGymP1' style={{ textDecoration: 'none', color: '#EA5C2B' }}>OpenGym </Link></Logo>
                 <Hamburger onClick={() => setIsOpen(!isOpen)}>
                     <span></span>
                     <span></span>
@@ -22,22 +22,22 @@ const Navbar = () => {
 
                     <MenuLink onClick={() => {
 
-                    }}><HashLink to='/#about' style={{ textDecoration: 'none' }} className='rr'> About Us </HashLink></MenuLink>
+                    }}><HashLink to='/OpenGymP1/#about' style={{ textDecoration: 'none' }} className='rr'> About Us </HashLink></MenuLink>
                     <MenuLink onClick={() => {
 
-                    }}><HashLink to='/#games' className='rr'> Games </HashLink></MenuLink>
-
-                    <MenuLink onClick={() => {
-
-                    }}> <Link to='/register' className='rr'>Registration</Link></MenuLink>
+                    }}><HashLink to='/OpenGymP1/#games' className='rr'> Games </HashLink></MenuLink>
 
                     <MenuLink onClick={() => {
 
-                    }}> <Link to='/highlights' className='rr'>Highlights</Link></MenuLink>
+                    }}> <Link to='/OpenGymP1/register' className='rr'>Registration</Link></MenuLink>
 
                     <MenuLink onClick={() => {
 
-                    }}><HashLink to='/#contact' className='rr'>Contact Us</HashLink></MenuLink>
+                    }}> <Link to='/OpenGymP1/highlights' className='rr'>Highlights</Link></MenuLink>
+
+                    <MenuLink onClick={() => {
+
+                    }}><HashLink to='/OpenGymP1/#contact' className='rr'>Contact Us</HashLink></MenuLink>
 
                 </Menu>
             </Nav>

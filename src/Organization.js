@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Navbar from './Navbar';
 import { Form, Button, Card } from 'react-bootstrap';
+import pickup from './images/pickup.jpg';
 
 class Organization extends React.Component {
 
@@ -16,7 +17,7 @@ class Organization extends React.Component {
                         width: '30rem', height: '25rem', background: '#95CD41'
                     }}>
 
-                        <Card.Img variant="top" src="/pickup.jpg" height='250px' width='20px' />
+                        <Card.Img variant="top" src={pickup} height='250px' width='20px' />
                         <div className='ContactForm'>
                             <div className='container'  >
                                 <div className='row' style={{ padding: '2 rem' }}>

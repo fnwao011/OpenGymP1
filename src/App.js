@@ -26,10 +26,10 @@ function App() {
       </div>
 
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/highlights" element={<Highlights />} />
-        <Route path="/register" element={<Registration />} />
-        <Route path="/organize" element={<Organization />} />
+        <Route path="/OpenGymP1" element={<HomePage />} />
+        <Route path="/OpenGymP1/highlights" element={<Highlights />} />
+        <Route path="/OpenGymP1/register" element={<Registration />} />
+        <Route path="/OpenGymP1/organize" element={<Organization />} />
       </Routes>
     </BrowserRouter>
 

@@ -107,7 +107,7 @@ const Registration = () => {
                                         {inputs}
                                         {/* Row 3 of form */}
 
-                                        <ResumeBtn className='submit-btn' type='submit' onClick={() => { navigate('/organize') }}>
+                                        <ResumeBtn className='submit-btn' type='submit' onClick={() => { navigate('/OpenGymP1/organize') }}>
                                             Submit
                                         </ResumeBtn>
                                     </form>

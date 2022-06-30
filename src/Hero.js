@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { useNavigate } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
+import baller from './images/baller.png'
 
 
 const Hero = () => {
@@ -15,12 +16,12 @@ const Hero = () => {
                         </Title>
                         <NiceButton onClick={() => {
 
-                        }}><HashLink to='/#about' style={{ textDecoration: 'none', color: 'white' }}>Learn More</HashLink></NiceButton>
+                        }}><HashLink to='/OpenGymP1/#about' style={{ textDecoration: 'none', color: 'white' }}>Learn More</HashLink></NiceButton>
 
                     </TitleWrapper>
 
                     <ImgWrapper>
-                        <img src='/baller.png' width='512px' height='512px' alt='hero image' />
+                        <img src={baller} width='512px' height='512px' alt='hero image' />
                     </ImgWrapper>
 
 

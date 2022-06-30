@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useNavigate } from "react-router-dom";
+import founder from './images/founder.jpg';
 
 
 const AboutUs = () => {
@@ -17,7 +18,7 @@ const AboutUs = () => {
                     <Left>
                         <ImageWrapper>
 
-                            <Profile width='509' height='300' src='/founder.jpg' alt='pickup'></Profile>
+                            <Profile width='509' height='300' src={founder} alt='pickup'></Profile>
                             <BodyText>Founder- Matthias Smith</BodyText>
                         </ImageWrapper>
 
@@ -30,7 +31,7 @@ const AboutUs = () => {
 
                             </ContentWrapper>
                         </BodyText>
-                        <ResumeBtn target="_blank" onClick={() => { navigate('/highlights') }}>Game Highlights</ResumeBtn>
+                        <ResumeBtn target="_blank" onClick={() => { navigate('/OpenGymP1/highlights') }}>Game Highlights</ResumeBtn>
                     </Right>
                 </InnerWrapper>
 

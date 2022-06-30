@@ -2,7 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { Card, Button } from 'react-bootstrap';
 import './Gamestyle.css';
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
+import p1 from './images/5v5.jpg';
+import p2 from './images/3v3.jpg';
+import p3 from './images/5v52.jpg';
+import p4 from './images/3v32.jpg';
 
 const GamePage = () => {
 
@@ -18,49 +22,49 @@ const GamePage = () => {
                 <RecWrapper>
 
                     <Card style={{ width: '15rem' }}>
-                        <Card.Img variant="top" src="/5v5.jpg" />
+                        <Card.Img variant="top" src={p1} />
                         <Card.Body>
                             <Card.Title>RecLeague 5v5</Card.Title>
                             <Card.Text>
                                 Some quick example text to build on the card title and make up the bulk of
                                 the card's content.
                             </Card.Text>
-                            <Button variant="primary" className='gameButton' onClick={() => { navigation('/register') }}>Register</Button>
+                            <Button variant="primary" className='gameButton' onClick={() => { navigation('/OpenGymP1/register') }}>Register</Button>
                         </Card.Body>
                     </Card>
                     <Card style={{
                         width: '15rem', marginLeft: '2rem '
                     }}>
-                        <Card.Img variant="top" src="/3v3.jpg" />
+                        <Card.Img variant="top" src={p2} />
                         <Card.Body>
                             <Card.Title>RecLeague 3v3</Card.Title>
                             <Card.Text>
                                 Some quick example text to build on the card title and make up the bulk of
                                 the card's content.
                             </Card.Text>
-                            <Button variant="primary" className='gameButton' onClick={() => { navigation('/register') }}>Register</Button>
+                            <Button variant="primary" className='gameButton' onClick={() => { navigation('/OpenGymP1/register') }}>Register</Button>
                         </Card.Body>
                     </Card>
                     <Card style={{ width: '15rem', marginLeft: '2em ' }}>
-                        <Card.Img variant="top" src="/5v52.jpg" />
+                        <Card.Img variant="top" src={p3} />
                         <Card.Body>
                             <Card.Title>OpenGym 5v5</Card.Title>
                             <Card.Text>
                                 Some quick example text to build on the card title and make up the bulk of
                                 the card's content.
                             </Card.Text>
-                            <Button variant="primary" className='gameButton' onClick={() => { navigation('/register') }}>Register</Button>
+                            <Button variant="primary" className='gameButton' onClick={() => { navigation('/OpenGymP1/register') }}>Register</Button>
                         </Card.Body>
                     </Card>
                     <Card style={{ width: '15rem', marginLeft: '2em ' }}>
-                        <Card.Img variant="top" src="/3v32.jpg" />
+                        <Card.Img variant="top" src={p4} />
                         <Card.Body>
                             <Card.Title>OpenGym 3v3</Card.Title>
                             <Card.Text>
                                 Some quick example text to build on the card title and make up the bulk of
                                 the card's content.
                             </Card.Text>
-                            <Button variant="primary" className='gameButton' onClick={() => { navigation('/register') }}>Register</Button>
+                            <Button variant="primary" className='gameButton' onClick={() => { navigation('/OpenGymP1/register') }}>Register</Button>
                         </Card.Body>
                     </Card>
                 </RecWrapper>
