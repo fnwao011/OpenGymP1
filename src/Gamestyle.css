@@ -1,0 +1,14 @@
+.gameButton {
+    background-color: white;
+    color: white;
+    border: 1px solid #EA5C2B;
+
+
+
+    transition: background-color 200ms ease-in-out;
+}
+
+.gameButton:hover {
+    background-color: #95CD41;
+    border: 1px solid #95CD41;
+}

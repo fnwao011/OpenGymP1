@@ -1,0 +1,14 @@
+.rr {
+
+    text-decoration: none;
+
+    color: #95CD41;
+    transition: all 0.3 ease-in;
+
+
+
+}
+
+.rr:hover {
+    color: #EA5C2B;
+}
