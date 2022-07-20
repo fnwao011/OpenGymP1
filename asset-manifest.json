@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/OpenGymP1/static/css/main.64d20e57.css",
-    "main.js": "/OpenGymP1/static/js/main.3fc85217.js",
-    "static/js/787.24ad2997.chunk.js": "/OpenGymP1/static/js/787.24ad2997.chunk.js",
-    "static/media/baller.png": "/OpenGymP1/static/media/baller.473629e9aaf3b7051ccf.png",
-    "static/media/3v32.jpg": "/OpenGymP1/static/media/3v32.5a4b6eb8e88c755d354e.jpg",
-    "static/media/pickup.jpg": "/OpenGymP1/static/media/pickup.5ab62cc7ef8948f35ec5.jpg",
-    "static/media/founder.jpg": "/OpenGymP1/static/media/founder.948cd5561e0187c36b35.jpg",
-    "static/media/5v5.jpg": "/OpenGymP1/static/media/5v5.5d4843b9b8682068964a.jpg",
-    "static/media/5v52.jpg": "/OpenGymP1/static/media/5v52.d232eee143f0d8466bf3.jpg",
-    "static/media/logo.svg": "/OpenGymP1/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/OpenGymP1/index.html",
-    "main.64d20e57.css.map": "/OpenGymP1/static/css/main.64d20e57.css.map",
-    "main.3fc85217.js.map": "/OpenGymP1/static/js/main.3fc85217.js.map",
-    "787.24ad2997.chunk.js.map": "/OpenGymP1/static/js/787.24ad2997.chunk.js.map"
+    "main.css": "/OpenGymFinal/static/css/main.64d20e57.css",
+    "main.js": "/OpenGymFinal/static/js/main.ecde1bd6.js",
+    "static/js/787.24ad2997.chunk.js": "/OpenGymFinal/static/js/787.24ad2997.chunk.js",
+    "static/media/baller.png": "/OpenGymFinal/static/media/baller.473629e9aaf3b7051ccf.png",
+    "static/media/3v32.jpg": "/OpenGymFinal/static/media/3v32.5a4b6eb8e88c755d354e.jpg",
+    "static/media/pickup.jpg": "/OpenGymFinal/static/media/pickup.5ab62cc7ef8948f35ec5.jpg",
+    "static/media/founder.jpg": "/OpenGymFinal/static/media/founder.948cd5561e0187c36b35.jpg",
+    "static/media/5v5.jpg": "/OpenGymFinal/static/media/5v5.5d4843b9b8682068964a.jpg",
+    "static/media/5v52.jpg": "/OpenGymFinal/static/media/5v52.d232eee143f0d8466bf3.jpg",
+    "static/media/logo.svg": "/OpenGymFinal/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/OpenGymFinal/index.html",
+    "main.64d20e57.css.map": "/OpenGymFinal/static/css/main.64d20e57.css.map",
+    "main.ecde1bd6.js.map": "/OpenGymFinal/static/js/main.ecde1bd6.js.map",
+    "787.24ad2997.chunk.js.map": "/OpenGymFinal/static/js/787.24ad2997.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.64d20e57.css",
-    "static/js/main.3fc85217.js"
+    "static/js/main.ecde1bd6.js"
   ]
 }
