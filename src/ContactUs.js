@@ -1,11 +1,50 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Form, Button } from 'react-bootstrap';
-
+import { Form, Button, Alert } from 'react-bootstrap';
+import { useNavigate } from "react-router-dom";
+import { useState } from 'react';
+import { render } from '@testing-library/react';
 
 
 
 const ContactUs = () => {
+
+    const [validated, setValidated] = useState(false);
+    const [show, setShow] = useState(false);
+
+    const navigate = useNavigate();
+
+    const handleSubmit = (event) => {
+
+        const form = event.currentTarget;
+
+        if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+
+        }
+        if (form.checkValidity() === true) {
+            setShow(true)
+        }
+        setValidated(true);
+
+
+
+    }
+
+    if (show) {
+        return (
+            <Alert variant="success" onClose={() => setShow(false)} dismissible >
+                <Alert.Heading>Message Sent!</Alert.Heading>
+                <p>
+                    Thank you for getting in on contact with us. We appreciate you taking the time to do that. We wil respond as soon as possible!
+                </p>
+
+
+            </Alert>
+        );
+    }
+
 
 
     return (
@@ -14,12 +53,13 @@ const ContactUs = () => {
                 <Title>Get in touch!</Title>
                 <BodyText> Communication and transparency is our companies biggest values. If you have any questions do not hesitate to reach out.</BodyText>
 
-                <div className='ContactForm'>
-                    <div className='container'  >
-                        <div className='row' style={{ padding: '2rem' }}>
-                            <div className='col-12 text-center'>
-                                <div className='contactForm'>
-                                    <form id='contact-form' noValidate>
+                <Form noValidate validated={validated} onSubmit={handleSubmit}>
+                    <div className='ContactForm'>
+                        <div className='container'  >
+                            <div className='row' style={{ padding: '2rem' }}>
+                                <div className='col-12 text-center'>
+                                    <div className='contactForm'>
+
                                         {/* Row 1 of form */}
                                         <div className='row formRow' style={{ padding: '0.5rem' }}>
                                             <div className='col-6'>
@@ -28,6 +68,7 @@ const ContactUs = () => {
                                                     name='name'
                                                     className='form-control formInput'
                                                     placeholder='Name'
+                                                    required
                                                 ></input>
                                             </div>
                                             <div className='col-6'>
@@ -36,6 +77,7 @@ const ContactUs = () => {
                                                     name='email'
                                                     className='form-control formInput'
                                                     placeholder='Email address'
+                                                    required
                                                 ></input>
                                             </div>
                                         </div>
@@ -47,6 +89,7 @@ const ContactUs = () => {
                                                     name='subject'
                                                     className='form-control formInput'
                                                     placeholder='Subject'
+                                                    required
                                                 ></input>
                                             </div>
                                         </div>
@@ -58,25 +101,27 @@ const ContactUs = () => {
                                                     name='message'
                                                     className='form-control formInput'
                                                     placeholder='Message'
+                                                    required
                                                 ></textarea>
                                             </div>
                                         </div>
-                                        <ResumeBtn className='submit-btn' type='submit' onClick={() => { alert('Thank You For Contacting') }}>
+                                        <ResumeBtn className='submit-btn' type='submit' >
                                             Submit
                                         </ResumeBtn>
-                                    </form>
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </Form>
 
             </Container>
-        </section>
+        </section >
     )
 }
 
-const ResumeBtn = styled.a`
+const ResumeBtn = styled.button`
     background-color: #EA5C2B;
     color:white;
     border: 1px solid #EA5C2B;

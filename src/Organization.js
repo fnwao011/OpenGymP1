@@ -1,83 +1,131 @@
 import React from 'react';
 import styled from 'styled-components';
 import Navbar from './Navbar';
-import { Form, Button, Card } from 'react-bootstrap';
+import { Form, Button, Card, ProgressBar, Alert } from 'react-bootstrap';
 import pickup from './images/pickup.jpg';
+import { useState } from 'react';
+import { useNavigate } from 'react-router';
 
-class Organization extends React.Component {
+const Organization = () => {
+    const [show, setShow] = useState(false)
+
+    const [validated, setValidated] = useState(false);
+
+    const navigate = useNavigate();
+
+    const handleSubmit = (event) => {
+
+        const form = event.currentTarget;
+
+        if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+
+        }
+        if (form.checkValidity() === true) {
+            setShow(true)
+        }
+        setValidated(true);
 
 
-    render() {
+
+    };
+
+    if (show) {
         return (
-            <div>
-                <Container>
-                    <Title>Organize your game!</Title>
+            <Alert variant="success" onClose={() => setShow(false)} >
+                <Alert.Heading>Your game has been organized!</Alert.Heading>
+                <p>
+                    Check you email for confirmation. We will also email you further information closer to the date of your game
+                </p>
+                <hr />
+                <div className="d-flex justify-content-end">
+                    <Button onClick={() => navigate('/OpenGymP1/')} variant="outline-success">
+                        Go Home!
+                    </Button>
+                </div>
+            </Alert>
+        );
+    }
 
-                    <Card style={{
-                        width: '30rem', height: '25rem', background: '#95CD41'
-                    }}>
 
-                        <Card.Img variant="top" src={pickup} height='250px' width='20px' />
+    return (
+
+
+        <div>
+            <Container>
+                <Title>Organize your game!</Title>
+                <ProgressBar animated variant='success' now={90} style={{ width: '40%', marginTop: '1.5em', marginBottom: '1.5em' }} />
+                <Card style={{
+                    width: '30rem', height: '25rem', background: '#95CD41'
+                }}>
+
+                    <Card.Img variant="top" src={pickup} height='250px' width='20px' />
+                    <Form noValidate validated={validated} onSubmit={handleSubmit} >
                         <div className='ContactForm'>
                             <div className='container'  >
                                 <div className='row' style={{ padding: '2 rem' }}>
                                     <div className=' text-center'>
                                         <div className='contactForm'>
-                                            <form id='contact-form' noValidate>
-                                                {/* Row 1 of form */}
-                                                <div className='row formRow' style={{ padding: '2rem' }}>
-                                                    <div className='col-6'>
-                                                        <input
-                                                            type='date'
-                                                            name='gameDate'
-                                                            className='form-control formInput'
-                                                            placeholder='Select Date'
-                                                        ></input>
-                                                    </div>
-                                                    <div className='col-6'>
-                                                        <Form.Select aria-label="Select League" placeholder='Select Opponent Team'>
-                                                            <option>Select Opponent</option>
-                                                            <option value="1">Shanghai Sharks</option>
-                                                            <option value="2">Orlando Magic</option>
 
-                                                        </Form.Select>
-                                                    </div>
+                                            {/* Row 1 of form */}
+                                            <div className='row formRow' style={{ padding: '2rem' }}>
+                                                <div className='col-6'>
+                                                    <input
+                                                        type='date'
+                                                        name='gameDate'
+                                                        className='form-control formInput'
+                                                        placeholder='Select Date'
+                                                        required
+
+                                                    ></input>
                                                 </div>
-                                                {/* Row 2 of form */}
-                                                <div className='row formRow' style={{ padding: '2 rem' }}>
+                                                <div className='col-6'>
+                                                    <Form.Select aria-label="Select League" placeholder='Select Opponent Team' required>
+                                                        <option value="" >Select Opponent</option>
+                                                        <option value="1">Shanghai Sharks</option>
+                                                        <option value="2">Orlando Magic</option>
 
-                                                    <div className='col'>
-
-                                                    </div>
-                                                    <div className='col'>
-
-                                                    </div>
-                                                    <div className='col'>
-
-                                                    </div>
+                                                    </Form.Select>
                                                 </div>
+                                            </div>
+                                            {/* Row 2 of form */}
+                                            <div className='row formRow' style={{ padding: '2 rem' }}>
+
+                                                <div className='col'>
+
+                                                </div>
+                                                <div className='col'>
+
+                                                </div>
+                                                <div className='col'>
+
+                                                </div>
+                                            </div>
 
 
-                                                {/* Row 3 of form */}
+                                            {/* Row 3 of form */}
 
-                                                <ResumeBtn className='submit-btn' type='submit' onClick={() => { alert('Confirmed') }}>
-                                                    Submit
-                                                </ResumeBtn>
-                                            </form>
+                                            <ResumeBtn className='submit-btn' type='submit'>
+                                                Submit
+                                            </ResumeBtn>
+
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </Card>
-                </Container>
-            </div >
-        );
-    }
+                    </Form>
+                </Card>
+            </Container>
+        </div >
+    );
 
 }
 
-const ResumeBtn = styled.a`
+
+
+const ResumeBtn = styled.button`
     background-color: #EA5C2B;
     color:white;
     border: 1px solid #EA5C2B;

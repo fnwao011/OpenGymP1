@@ -12,6 +12,7 @@ import Organization from './Organization';
 import { HashRouter, Route, useNavigate, Routes } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import HomePage from './Homepage';
+import Faq from './Faq';
 
 
 
@@ -30,6 +31,7 @@ function App() {
         <Route path="/OpenGymP1/highlights" element={<Highlights />} />
         <Route path="/OpenGymP1/register" element={<Registration />} />
         <Route path="/OpenGymP1/organize" element={<Organization />} />
+        <Route path="/OpenGymP1/faq" element={<Faq />} />
       </Routes>
     </HashRouter>
 

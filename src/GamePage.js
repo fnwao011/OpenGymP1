@@ -26,10 +26,9 @@ const GamePage = () => {
                         <Card.Body>
                             <Card.Title>RecLeague 5v5</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
+                                5 players vs 5 players. Rec League teams will get jerseys and team at the top of standings will win the trophy!
                             </Card.Text>
-                            <Button variant="primary" className='gameButton' onClick={() => { navigation('/OpenGymP1/register') }}>Register</Button>
+                            <Button variant="primary" className='gameButton' style={{ background: '#FF7F3F', border: '#FF7F3F' }} onClick={() => { navigation('/OpenGymP1/register') }}>Register</Button>
                         </Card.Body>
                     </Card>
                     <Card style={{
@@ -39,10 +38,9 @@ const GamePage = () => {
                         <Card.Body>
                             <Card.Title>RecLeague 3v3</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
+                                3 players vs 3 players. Rec League teams will get jerseys and team at the top of standings will win the trophy!
                             </Card.Text>
-                            <Button variant="primary" className='gameButton' onClick={() => { navigation('/OpenGymP1/register') }}>Register</Button>
+                            <Button variant="primary" className='gameButton' style={{ background: '#FF7F3F', border: '#FF7F3F' }} onClick={() => { navigation('/OpenGymP1/register') }}>Register</Button>
                         </Card.Body>
                     </Card>
                     <Card style={{ width: '15rem', marginLeft: '2em ' }}>
@@ -50,10 +48,9 @@ const GamePage = () => {
                         <Card.Body>
                             <Card.Title>OpenGym 5v5</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
+                                Drop in! 5 players vs 5 players. This a flexible pickup game where teams register to play at a certain day. Just for fun!
                             </Card.Text>
-                            <Button variant="primary" className='gameButton' onClick={() => { navigation('/OpenGymP1/register') }}>Register</Button>
+                            <Button variant="primary" className='gameButton' style={{ background: '#FF7F3F', border: '#FF7F3F' }} onClick={() => { navigation('/OpenGymP1/register') }}>Register</Button>
                         </Card.Body>
                     </Card>
                     <Card style={{ width: '15rem', marginLeft: '2em ' }}>
@@ -61,10 +58,9 @@ const GamePage = () => {
                         <Card.Body>
                             <Card.Title>OpenGym 3v3</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
+                                Drop in! 3 players vs 3 players. This a flexible pickup game where teams register to play at a certain day. Just for fun!
                             </Card.Text>
-                            <Button variant="primary" className='gameButton' onClick={() => { navigation('/OpenGymP1/register') }}>Register</Button>
+                            <Button variant="primary" className='gameButton' style={{ background: '#FF7F3F', border: '#FF7F3F' }} onClick={() => { navigation('/OpenGymP1/register') }}>Register</Button>
                         </Card.Body>
                     </Card>
                 </RecWrapper>

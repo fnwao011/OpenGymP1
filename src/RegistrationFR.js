@@ -4,14 +4,14 @@ import Navbar from './Navbar';
 import { Form, Button, ProgressBar } from 'react-bootstrap';
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
-import RegistrationFR from './RegistrationFR';
+import Registration from './Registration';
 import { render } from '@testing-library/react';
 
 
-const Registration = () => {
+const RegistrationFR = () => {
 
     const [numOfPlayers, setPlayers] = useState(0);
-    const [language, setLanguage] = useState("eng");
+    const [language, setLanguage] = useState("fr");
 
 
     const [validated, setValidated] = useState(false);
@@ -46,12 +46,12 @@ const Registration = () => {
                     <Form.Select aria-label="Select Team Format" required onChange={e => {
 
                     }} >
-                        <option value="">Select Player Position</option>
-                        <option value='3'>Point Guard</option>
-                        <option value="5">Shooting Guard</option>
-                        <option value="5">Small Forward</option>
-                        <option value="5">Power forward </option>
-                        <option value="5">Center</option>
+                        <option value="">Choisissez la position du joueur</option>
+                        <option value='3'>Meneur</option>
+                        <option value="5">SGarde de tir</option>
+                        <option value="5">Petit attaquant</option>
+                        <option value="5">Puissance avant</option>
+                        <option value="5">Centre</option>
 
 
                     </Form.Select>
@@ -61,7 +61,7 @@ const Registration = () => {
                         type='text'
                         name='name'
                         className='form-control formInput'
-                        placeholder='Name'
+                        placeholder='Nom'
                         required
                     ></input>
                 </div>
@@ -69,22 +69,22 @@ const Registration = () => {
         )
     }
 
-    if (language == "fr") {
+    if (language == "eng") {
         return (
-            <RegistrationFR />
+            <Registration />
         );
     }
 
     return (
         <div>
             <Footer>
-                <BodyText>Chosose Language</BodyText>
-                <BodyText >ENG</BodyText>
-                <BodyText onClick={() => { setLanguage('fr') }}>FR</BodyText>
+                <BodyText>Choisissez la langue</BodyText>
+                <BodyText onClick={() => { setLanguage("eng") }}>ENG</BodyText>
+                <BodyText>FR</BodyText>
             </Footer>
 
             <Container>
-                <Title>Register</Title>
+                <Title>Inscrire</Title>
                 <ProgressBar animated variant='success' now={45} style={{ width: '40%', marginTop: '2em', marginBottom: '2em' }} />
                 <Form noValidate validated={validated} onSubmit={handleSubmit}>
                     <div className='ContactForm'>
@@ -101,8 +101,7 @@ const Registration = () => {
                                                     <Form.Control
                                                         required
                                                         type="text"
-                                                        placeholder="Name"
-                                                        minlength="2"
+                                                        placeholder="Nom"
 
                                                     />
 
@@ -114,7 +113,7 @@ const Registration = () => {
                                                     <Form.Control
                                                         required
                                                         type="email"
-                                                        placeholder="Email"
+                                                        placeholder="E-mail"
 
                                                     />
                                                 </Form.Group>
@@ -125,18 +124,18 @@ const Registration = () => {
 
                                             <div className='col'>
                                                 <Form.Select aria-label="Select League" placeholder='Select Experience Level' required>
-                                                    <option value="">Select Type of League</option>
-                                                    <option value="1">Rec League</option>
-                                                    <option value="2">Open Court</option>
+                                                    <option value="">Choisissez le type de ligue</option>
+                                                    <option value="1">Ligue récréative</option>
+                                                    <option value="2">Audience publique</option>
 
                                                 </Form.Select>
                                             </div>
                                             <div className='col'>
                                                 <Form.Select aria-label="Select Experience Level" required >
-                                                    <option value="">Select Experience Level</option>
-                                                    <option value="Beginner">Beginner</option>
-                                                    <option value="Intermediate">Intermediate</option>
-                                                    <option value="Advanced">Advanced</option>
+                                                    <option value="">Choisissez le niveau d'expérience</option>
+                                                    <option value="Beginner">Débutant</option>
+                                                    <option value="Intermediate">Intermédiaire</option>
+                                                    <option value="Advanced">Avancé</option>
 
                                                 </Form.Select>
                                             </div>
@@ -144,7 +143,7 @@ const Registration = () => {
                                                 <Form.Select aria-label="Select Team Format" required onChange={e => {
                                                     setPlayers(parseInt(e.target.value, 10))
                                                 }} >
-                                                    <option value="">Select Team Format</option>
+                                                    <option value="">Choisissez le format de l'équipe</option>
                                                     <option value='3'>3v3</option>
                                                     <option value="5">5v5</option>
 
@@ -156,7 +155,9 @@ const Registration = () => {
                                         {inputs}
                                         {/* Row 3 of form */}
 
-                                        <ResumeBtn type="submit">Submit </ResumeBtn>
+                                        <ResumeBtn className='submit-btn' type='submit'>
+                                            Soumettre
+                                        </ResumeBtn>
 
                                     </div>
                                 </div>
@@ -168,7 +169,7 @@ const Registration = () => {
             </Container>
 
 
-        </div >
+        </div>
     )
 
 }
@@ -255,4 +256,4 @@ const BodyText = styled.p`
     
 `
 
-export default Registration
+export default RegistrationFR

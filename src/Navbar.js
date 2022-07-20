@@ -37,6 +37,10 @@ const Navbar = () => {
 
                     <MenuLink onClick={() => {
 
+                    }}> <Link to='/OpenGymP1/faq' className='rr'>FAQ</Link></MenuLink>
+
+                    <MenuLink onClick={() => {
+
                     }}><HashLink to='/OpenGymP1/#contact' className='rr'>Contact Us</HashLink></MenuLink>
 
                 </Menu>
